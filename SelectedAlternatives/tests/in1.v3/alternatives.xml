@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmcda:XMCDA xmlns:xmcda="http://www.decision-deck.org/2013/XMCDA-3.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.decision-deck.org/2013/XMCDA-3.0.0 http://www.decision-deck.org/xmcda/_downloads/XMCDA-3.0.0.xsd">
+  <alternatives>
+    <alternative id="option 7"/>
+    <alternative id="option 8"/>
+    <alternative id="option 9"/>
+    <alternative id="option 10"/>
+    <alternative id="option 11"/>
+    <alternative id="option 12"/>
+    <alternative id="option 13"/>
+    <alternative id="option 14"/>
+    <alternative id="option 15"/>
+  </alternatives>
+</xmcda:XMCDA>

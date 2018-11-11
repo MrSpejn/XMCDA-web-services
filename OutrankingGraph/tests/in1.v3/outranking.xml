@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmcda:XMCDA xmlns:xmcda="http://www.decision-deck.org/2013/XMCDA-3.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.decision-deck.org/2013/XMCDA-3.0.0 http://www.decision-deck.org/xmcda/_downloads/XMCDA-3.0.0.xsd">
+	<alternativesMatrix id="id_1" name="test-1" mcdaConcept="mcdaConcept-1">
+		<row>
+			<alternativeID>option 1</alternativeID>
+			<column>
+				<alternativeID>option 2</alternativeID>
+				<values>
+					<value>
+						<boolean>true</boolean>
+					</value>
+				</values>
+			</column>
+			<column>
+				<alternativeID>option 3</alternativeID>
+				<values>
+					<value>
+						<boolean>true</boolean>
+					</value>
+				</values>
+			</column>
+			<column>
+				<alternativeID>option 15</alternativeID>
+				<values>
+					<value>
+						<boolean>true</boolean>
+					</value>
+				</values>
+			</column>
+			<column>
+				<alternativeID>option 14</alternativeID>
+				<values>
+					<value>
+						<boolean>true</boolean>
+					</value>
+				</values>
+			</column>
+		</row>
+		<row>
+			<alternativeID>option 2</alternativeID>
+			<column>
+				<alternativeID>option 10</alternativeID>
+				<values>
+					<value>
+						<boolean>true</boolean>
+					</value>
+				</values>
+			</column>
+		</row>
+		<row>
+			<alternativeID>option 3</alternativeID>
+			<column>
+				<alternativeID>option 5</alternativeID>
+				<values>
+					<value>
+						<boolean>true</boolean>
+					</value>
+				</values>
+			</column>
+			<column>
+				<alternativeID>option 12</alternativeID>
+				<values>
+					<value>
+						<boolean>true</boolean>
+					</value>
+				</values>
+			</column>
+			<column>
+				<alternativeID>option 6</alternativeID>
+				<values>
+					<value>
+						<boolean>true</boolean>
+					</value>
+				</values>
+			</column>
+		</row>
+		<row>
+			<alternativeID>option 4</alternativeID>
+			<column>
+				<alternativeID>option 7</alternativeID>
+				<values>
+					<value>
+						<boolean>true</boolean>
+					</value>
+				</values>
+			</column>
+			<column>
+				<alternativeID>option 8</alternativeID>
+				<values>
+					<value>
+						<boolean>true</boolean>
+					</value>
+				</values>
+			</column>
+			<column>
+				<alternativeID>option 9</alternativeID>
+				<values>
+					<value>
+						<boolean>true</boolean>
+					</value>
+				</values>
+			</column>
+			<column>
+				<alternativeID>option 12</alternativeID>
+				<values>
+					<value>
+						<boolean>true</boolean>
+					</value>
+				</values>
+			</column>
+		</row>
+		<row>
+			<alternativeID>option 5</alternativeID>
+			<column>
+				<alternativeID>option 4</alternativeID>
+				<values>
+					<value>
+						<boolean>true</boolean>
+					</value>
+				</values>
+			</column>
+			<column>
+				<alternativeID>option 12</alternativeID>
+				<values>
+					<value>
+						<boolean>true</boolean>
+					</value>
+				</values>
+			</column>
+		</row>
+		<row>
+			<alternativeID>option 13</alternativeID>
+			<column>
+				<alternativeID>option 15</alternativeID>
+				<values>
+					<value>
+						<boolean>true</boolean>
+					</value>
+				</values>
+			</column>
+		</row>
+		<row>
+			<alternativeID>option 11</alternativeID>
+			<column>
+				<alternativeID>option 3</alternativeID>
+				<values>
+					<value>
+						<boolean>true</boolean>
+					</value>
+				</values>
+			</column>
+		</row>
+		<row>
+			<alternativeID>option 7</alternativeID>
+			<column>
+				<alternativeID>option 6</alternativeID>
+				<values>
+					<value>
+						<boolean>true</boolean>
+					</value>
+				</values>
+			</column>
+		</row>
+		<row>
+			<alternativeID>option 15</alternativeID>
+			<column>
+				<alternativeID>option 4</alternativeID>
+				<values>
+					<value>
+						<boolean>true</boolean>
+					</value>
+				</values>
+			</column>
+		</row>
+	</alternativesMatrix>
+</xmcda:XMCDA>
