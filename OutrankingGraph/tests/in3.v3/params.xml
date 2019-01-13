@@ -11,7 +11,7 @@
 		<parameter id="font_size" name="font_size">
 			<values>
 			<value>
-				<integer>5</integer>
+				<integer>10</integer>
 			</value>
 			</values>
 		</parameter>

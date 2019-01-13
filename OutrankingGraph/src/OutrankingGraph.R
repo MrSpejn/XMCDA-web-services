@@ -29,6 +29,13 @@ multiplot <- function(..., plotlist=NULL, file, cols=1, layout=NULL) {
   }
 }
 
+print_graph <- function(adjacency_matrix, highlighted=list()) {
+    graph <- graph_from_adjacency_matrix(adjacency_matrix, mode=list("directed"))
+    arrow_g <- arrow(angle = 30, length = unit(0.15, 'inches'), ends = 'last', type = 'closed')
+
+    
+}
+
 OutrankingGraph <- function(inputs) {
   if (inputs$seed != 0) {
     set.seed(inputs$seed)
@@ -53,26 +60,38 @@ OutrankingGraph <- function(inputs) {
 
   graph <- graph_from_data_frame(
       edges,
-      directed = TRUE,
+      directed = inputs$is_directed,
       vertices = vertices
   )
 
   png(result <- tempfile(fileext = ".png"), height = 800, width=800);   
-    
-  arrow_g <- arrow(angle = 30, length = unit(0.15, 'inches'), ends = 'last', type = 'closed')
+  
+  arrow_for_edge = NULL
+  if (inputs$is_directed) {
+    arrow_for_edge <- arrow(angle = 30, length = unit(0.15, 'inches'), ends = 'last', type = 'closed')
+  }
 
   g1 <- ggraph(graph, layout = 'kk') +
+      geom_point(
+          aes(x=x, y=y),
+          size=21
+      ) +
+      geom_point(
+          aes(x=x, y=y, colour=ifelse(name %in% highlighted_alternatives, 'selected', 'normal')),
+          size=20,
+      ) +
+      scale_colour_manual(values=c("white", "gray30")) +
+      geom_node_label(aes(label=display_name), size=inputs$font_size, fill='white', label.size=0) +
+      geom_node_circle(aes(x0=x, y0=y, r=0.15), size=0) +
       geom_edge_link(
-          colour = 'palegreen4',
-          arrow = arrow_g,
-          end_cap = circle(0.5, 'inches')) + 
-      geom_node_circle(
-          aes(r=0.15, fill=ifelse(name %in% highlighted_alternatives, 'selected', 'normal')),
-          size=0
-      ) + 
-      scale_fill_manual(values=c("skyblue2", "skyblue4")) +
-      geom_node_label(aes(label=display_name), size=font_size, fill='azure2', label.size=0) +
-      theme_void() + theme(legend.position="none", plot.title=element_text(size=30, hjust=0.5)) +
+          colour = 'gray30',
+          arrow = arrow_for_edge,
+          start_cap = circle(1),
+          end_cap = circle(1)) + 
+      theme_void() + theme(
+          legend.position="none",
+          plot.title=element_text(size=30, hjust=0.5),
+      ) +
       ggtitle("Outranking graph")
 
   multiplot(g1)

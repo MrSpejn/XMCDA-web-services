@@ -16,7 +16,7 @@
 		</parameter>
         <parameter id="is_directed" name="is_directed">
 			<value>
-				<boolean>true</boolean>
+				<boolean>false</boolean>
 			</value>
 		</parameter>
 	</methodParameters>

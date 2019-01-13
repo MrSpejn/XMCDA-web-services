@@ -47,6 +47,6 @@ checkAndExtractInputs <- function(xmcdaData, programExecutionResult) {
     highlighted_alternatives=highlighted_alternatives,
     seed=parameters[[1]]$seed[[1]],
     font_size=parameters[[1]]$font_size[[1]],
-    is_direct=parameters[[1]]$is_direct[[1]]
+    is_directed=parameters[[1]]$is_directed[[1]]
   ))
 }

@@ -11,14 +11,14 @@
 		<parameter id="font_size" name="font_size">
 			<values>
 			<value>
-				<integer>5</integer>
+				<integer>10</integer>
 			</value>
 			</values>
 		</parameter>
         <parameter id="is_directed" name="is_directed">
 			<values>
 			<value>
-				<boolean>true</boolean>
+				<boolean>false</boolean>
 			</value>
 			</values>
 		</parameter>
