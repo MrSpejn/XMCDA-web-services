@@ -9,6 +9,13 @@
 			<terminal>
 				<alternativeID>option 2</alternativeID>
 			</terminal>
+			<values>
+				<value>
+				<boolean>
+					true
+				</boolean>
+				</value>
+			</values>
 		</pair>
 		<pair>
 			<initial>
@@ -17,6 +24,13 @@
 			<terminal>
 				<alternativeID>option 10</alternativeID>
 			</terminal>
+			<values>
+				<value>
+				<boolean>
+					true
+				</boolean>
+				</value>
+			</values>
 		</pair>
 		<pair>
 			<initial>
@@ -25,6 +39,13 @@
 			<terminal>
 				<alternativeID>option 3</alternativeID>
 			</terminal>
+			<values>
+				<value>
+				<boolean>
+					true
+				</boolean>
+				</value>
+			</values>
 		</pair>
         <pair>
 			<initial>
@@ -33,6 +54,13 @@
 			<terminal>
 				<alternativeID>option 4</alternativeID>
 			</terminal>
+			<values>
+				<value>
+				<boolean>
+					true
+				</boolean>
+				</value>
+			</values>
 		</pair>
         	<pair>
 			<initial>
@@ -41,6 +69,13 @@
 			<terminal>
 				<alternativeID>option 15</alternativeID>
 			</terminal>
+			<values>
+				<value>
+				<boolean>
+					true
+				</boolean>
+				</value>
+			</values>
 		</pair>
         <pair>
 			<initial>
@@ -49,6 +84,13 @@
 			<terminal>
 				<alternativeID>option 15</alternativeID>
 			</terminal>
+			<values>
+				<value>
+				<boolean>
+					true
+				</boolean>
+				</value>
+			</values>
 		</pair>
         <pair>
 			<initial>
@@ -57,6 +99,13 @@
 			<terminal>
 				<alternativeID>option 3</alternativeID>
 			</terminal>
+			<values>
+				<value>
+				<boolean>
+					true
+				</boolean>
+				</value>
+			</values>
 		</pair>
         	<pair>
 			<initial>
@@ -65,6 +114,13 @@
 			<terminal>
 				<alternativeID>option 6</alternativeID>
 			</terminal>
+			<values>
+				<value>
+				<boolean>
+					true
+				</boolean>
+				</value>
+			</values>
 		</pair>
          <pair>
 			<initial>
@@ -73,6 +129,13 @@
 			<terminal>
 				<alternativeID>option 14</alternativeID>
 			</terminal>
+			<values>
+				<value>
+				<boolean>
+					true
+				</boolean>
+				</value>
+			</values>
 		</pair>
         <pair>
 			<initial>
@@ -81,6 +144,13 @@
 			<terminal>
 				<alternativeID>option 5</alternativeID>
 			</terminal>
+			<values>
+				<value>
+				<boolean>
+					true
+				</boolean>
+				</value>
+			</values>
 		</pair>
          <pair>
 			<initial>
@@ -89,6 +159,13 @@
 			<terminal>
 				<alternativeID>option 12</alternativeID>
 			</terminal>
+			<values>
+				<value>
+				<boolean>
+					true
+				</boolean>
+				</value>
+			</values>
 		</pair>
         <pair>
 			<initial>
@@ -97,6 +174,13 @@
 			<terminal>
 				<alternativeID>option 7</alternativeID>
 			</terminal>
+			<values>
+				<value>
+				<boolean>
+					true
+				</boolean>
+				</value>
+			</values>
 		</pair>
          <pair>
 			<initial>
@@ -105,6 +189,13 @@
 			<terminal>
 				<alternativeID>option 8</alternativeID>
 			</terminal>
+			<values>
+				<value>
+				<boolean>
+					true
+				</boolean>
+				</value>
+			</values>
 		</pair>
           <pair>
 			<initial>
@@ -113,6 +204,13 @@
 			<terminal>
 				<alternativeID>option 9</alternativeID>
 			</terminal>
+			<values>
+				<value>
+				<boolean>
+					true
+				</boolean>
+				</value>
+			</values>
 		</pair>
         	<pair>
 			<initial>
@@ -121,6 +219,13 @@
 			<terminal>
 				<alternativeID>option 4</alternativeID>
 			</terminal>
+			<values>
+				<value>
+				<boolean>
+					true
+				</boolean>
+				</value>
+			</values>
 		</pair>
                 <pair>
 			<initial>
@@ -129,6 +234,13 @@
 			<terminal>
 				<alternativeID>option 12</alternativeID>
 			</terminal>
+			<values>
+				<value>
+				<boolean>
+					true
+				</boolean>
+				</value>
+			</values>
 		</pair>
         <pair>
 			<initial>
@@ -137,6 +249,13 @@
 			<terminal>
 				<alternativeID>option 12</alternativeID>
 			</terminal>
+			<values>
+				<value>
+				<boolean>
+					true
+				</boolean>
+				</value>
+			</values>
 		</pair>
         <pair>
 			<initial>
@@ -145,6 +264,13 @@
 			<terminal>
 				<alternativeID>option 6</alternativeID>
 			</terminal>
+			<values>
+				<value>
+				<boolean>
+					true
+				</boolean>
+				</value>
+			</values>
 		</pair>
 	</pairs>
 </alternativesComparisons>

@@ -29,13 +29,6 @@ multiplot <- function(..., plotlist=NULL, file, cols=1, layout=NULL) {
   }
 }
 
-print_graph <- function(adjacency_matrix, highlighted=list()) {
-    graph <- graph_from_adjacency_matrix(adjacency_matrix, mode=list("directed"))
-    arrow_g <- arrow(angle = 30, length = unit(0.15, 'inches'), ends = 'last', type = 'closed')
-
-    
-}
-
 OutrankingGraph <- function(inputs) {
   if (inputs$seed != 0) {
     set.seed(inputs$seed)
@@ -44,12 +37,22 @@ OutrankingGraph <- function(inputs) {
   highlighted_alternatives <- inputs$highlighted_alternatives
   font_size <- inputs$font_size
   is_directed <- inputs$is_directed
+  adjecency_matrix <- inputs$adjecency_matrix
 
   from <- c()
   to <- c()
-  for (pair in inputs$alternative_comparisions) {
-    from <- c(from, pair[[1]])
-    to <- c(to, pair[[2]])
+  
+  for (row in rownames(adjecency_matrix)) {
+    for (col in colnames(adjecency_matrix)) {
+      if (adjecency_matrix[row, col]) {
+        from <- c(from, row)
+        to <- c(to, col)
+      }
+    }
+  }
+  
+  if (length(from) == 0) {
+    stop("No edges in adjecency matrix")
   }
 
   edges <- data.frame('from'=from, 'to'=to)

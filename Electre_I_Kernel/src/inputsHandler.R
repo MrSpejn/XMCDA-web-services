@@ -8,10 +8,6 @@ getMatrixValue = function(xmcdaMat, a1, a2) {
 		msg <- paste("The alternatives matrix has invalid value for", a1$id(), "-", a2$id())
 		putProgramExecutionResult(xmcdaMessages, errors = msg)
 		NULL
-	} else if (! value$isNumeric()) {
-		msg <- paste("The alternatives matrix has non numeric value for", a1$id(), "-", a2$id())
-		putProgramExecutionResult(xmcdaMessages, errors = msg)
-		NULL
 	} else if (value$size() != 1) {
 		msg <- paste("The alternatives matrix can contain only single values", a1$id(), "-", a2$id())
 		putProgramExecutionResult(xmcdaMessages, errors = msg)
@@ -37,7 +33,9 @@ getOutrankingMatrix <- function(xmcdaData, alternatives) {
   )
   for (key in keyset) {
     value = getMatrixValue(extractedMatrix, key$x, key$y)
-    outrankingMatrix[key$x$id(), key$y$id()] <- value
+    if (value) {
+      outrankingMatrix[key$x$id(), key$y$id()] <- 1
+    }
   }
   outrankingMatrix
 }
