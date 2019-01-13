@@ -1,0 +1,421 @@
+<?xml version="1.0" ?>
+<xmcda:XMCDA xmlns:xmcda="http://www.decision-deck.org/2017/XMCDA-3.0.2"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.decision-deck.org/2017/XMCDA-3.0.2
+    http://www.decision-deck.org/xmcda/_downloads/XMCDA-3.0.2.xsd">
+    <alternativesMatrix>
+		<row>
+			<alternativeID>option 1</alternativeID>
+			<column>
+				<alternativeID>option 1</alternativeID>
+				<values>
+					<value>
+						<real>0.0</real>
+					</value>
+				</values>
+			</column>
+			<column>
+				<alternativeID>option 2</alternativeID>
+				<values>
+					<value>
+						<real>1.0</real>
+					</value>
+				</values>
+			</column>
+			<column>
+				<alternativeID>option 3</alternativeID>
+				<values>
+					<value>
+						<real>0.0</real>
+					</value>
+				</values>
+			</column>
+			<column>
+				<alternativeID>option 4</alternativeID>
+				<values>
+					<value>
+						<real>1.0</real>
+					</value>
+				</values>
+			</column>
+			<column>
+				<alternativeID>option 5</alternativeID>
+				<values>
+					<value>
+						<real>1.0</real>
+					</value>
+				</values>
+			</column>
+			<column>
+				<alternativeID>option 6</alternativeID>
+				<values>
+					<value>
+						<real>0.0</real>
+					</value>
+				</values>
+			</column>
+			<column>
+				<alternativeID>option 7</alternativeID>
+				<values>
+					<value>
+						<real>0.0</real>
+					</value>
+				</values>
+			</column>
+		</row>
+		<row>
+			<alternativeID>option 2</alternativeID>
+			<column>
+				<alternativeID>option 1</alternativeID>
+				<values>
+					<value>
+						<real>0.0</real>
+					</value>
+				</values>
+			</column>
+			<column>
+				<alternativeID>option 2</alternativeID>
+				<values>
+					<value>
+						<real>0.0</real>
+					</value>
+				</values>
+			</column>
+			<column>
+				<alternativeID>option 3</alternativeID>
+				<values>
+					<value>
+						<real>0.0</real>
+					</value>
+				</values>
+			</column>
+			<column>
+				<alternativeID>option 4</alternativeID>
+				<values>
+					<value>
+						<real>0.0</real>
+					</value>
+				</values>
+			</column>
+			<column>
+				<alternativeID>option 5</alternativeID>
+				<values>
+					<value>
+						<real>0.0</real>
+					</value>
+				</values>
+			</column>
+			<column>
+				<alternativeID>option 6</alternativeID>
+				<values>
+					<value>
+						<real>1.0</real>
+					</value>
+				</values>
+			</column>
+			<column>
+				<alternativeID>option 7</alternativeID>
+				<values>
+					<value>
+						<real>1.0</real>
+					</value>
+				</values>
+			</column>
+		</row>
+		<row>
+			<alternativeID>option 3</alternativeID>
+			<column>
+				<alternativeID>option 1</alternativeID>
+				<values>
+					<value>
+						<real>0.0</real>
+					</value>
+				</values>
+			</column>
+			<column>
+				<alternativeID>option 2</alternativeID>
+				<values>
+					<value>
+						<real>1.0</real>
+					</value>
+				</values>
+			</column>
+			<column>
+				<alternativeID>option 3</alternativeID>
+				<values>
+					<value>
+						<real>0.0</real>
+					</value>
+				</values>
+			</column>
+			<column>
+				<alternativeID>option 4</alternativeID>
+				<values>
+					<value>
+						<real>1.0</real>
+					</value>
+				</values>
+			</column>
+			<column>
+				<alternativeID>option 5</alternativeID>
+				<values>
+					<value>
+						<real>0.0</real>
+					</value>
+				</values>
+			</column>
+			<column>
+				<alternativeID>option 6</alternativeID>
+				<values>
+					<value>
+						<real>0.0</real>
+					</value>
+				</values>
+			</column>
+			<column>
+				<alternativeID>option 7</alternativeID>
+				<values>
+					<value>
+						<real>0.0</real>
+					</value>
+				</values>
+			</column>
+		</row>
+		<row>
+			<alternativeID>option 4</alternativeID>
+			<column>
+				<alternativeID>option 1</alternativeID>
+				<values>
+					<value>
+						<real>0.0</real>
+					</value>
+				</values>
+			</column>
+			<column>
+				<alternativeID>option 2</alternativeID>
+				<values>
+					<value>
+						<real>1.0</real>
+					</value>
+				</values>
+			</column>
+			<column>
+				<alternativeID>option 3</alternativeID>
+				<values>
+					<value>
+						<real>0.0</real>
+					</value>
+				</values>
+			</column>
+			<column>
+				<alternativeID>option 4</alternativeID>
+				<values>
+					<value>
+						<real>0.0</real>
+					</value>
+				</values>
+			</column>
+			<column>
+				<alternativeID>option 5</alternativeID>
+				<values>
+					<value>
+						<real>0.0</real>
+					</value>
+				</values>
+			</column>
+			<column>
+				<alternativeID>option 6</alternativeID>
+				<values>
+					<value>
+						<real>0.0</real>
+					</value>
+				</values>
+			</column>
+			<column>
+				<alternativeID>option 7</alternativeID>
+				<values>
+					<value>
+						<real>0.0</real>
+					</value>
+				</values>
+			</column>
+		</row>
+		<row>
+			<alternativeID>option 5</alternativeID>
+			<column>
+				<alternativeID>option 1</alternativeID>
+				<values>
+					<value>
+						<real>0.0</real>
+					</value>
+				</values>
+			</column>
+			<column>
+				<alternativeID>option 2</alternativeID>
+				<values>
+					<value>
+						<real>1.0</real>
+					</value>
+				</values>
+			</column>
+			<column>
+				<alternativeID>option 3</alternativeID>
+				<values>
+					<value>
+						<real>1.0</real>
+					</value>
+				</values>
+			</column>
+			<column>
+				<alternativeID>option 4</alternativeID>
+				<values>
+					<value>
+						<real>0.0</real>
+					</value>
+				</values>
+			</column>
+			<column>
+				<alternativeID>option 5</alternativeID>
+				<values>
+					<value>
+						<real>0.0</real>
+					</value>
+				</values>
+			</column>
+			<column>
+				<alternativeID>option 6</alternativeID>
+				<values>
+					<value>
+						<real>0.0</real>
+					</value>
+				</values>
+			</column>
+			<column>
+				<alternativeID>option 7</alternativeID>
+				<values>
+					<value>
+						<real>0.0</real>
+					</value>
+				</values>
+			</column>
+		</row>
+		<row>
+			<alternativeID>option 6</alternativeID>
+			<column>
+				<alternativeID>option 1</alternativeID>
+				<values>
+					<value>
+						<real>0.0</real>
+					</value>
+				</values>
+			</column>
+			<column>
+				<alternativeID>option 2</alternativeID>
+				<values>
+					<value>
+						<real>0.0</real>
+					</value>
+				</values>
+			</column>
+			<column>
+				<alternativeID>option 3</alternativeID>
+				<values>
+					<value>
+						<real>0.0</real>
+					</value>
+				</values>
+			</column>
+			<column>
+				<alternativeID>option 4</alternativeID>
+				<values>
+					<value>
+						<real>0.0</real>
+					</value>
+				</values>
+			</column>
+			<column>
+				<alternativeID>option 5</alternativeID>
+				<values>
+					<value>
+						<real>0.0</real>
+					</value>
+				</values>
+			</column>
+			<column>
+				<alternativeID>option 6</alternativeID>
+				<values>
+					<value>
+						<real>0.0</real>
+					</value>
+				</values>
+			</column>
+			<column>
+				<alternativeID>option 7</alternativeID>
+				<values>
+					<value>
+						<real>0.0</real>
+					</value>
+				</values>
+			</column>
+		</row>
+		<row>
+			<alternativeID>option 7</alternativeID>
+			<column>
+				<alternativeID>option 1</alternativeID>
+				<values>
+					<value>
+						<real>0.0</real>
+					</value>
+				</values>
+			</column>
+			<column>
+				<alternativeID>option 2</alternativeID>
+				<values>
+					<value>
+						<real>0.0</real>
+					</value>
+				</values>
+			</column>
+			<column>
+				<alternativeID>option 3</alternativeID>
+				<values>
+					<value>
+						<real>0.0</real>
+					</value>
+				</values>
+			</column>
+			<column>
+				<alternativeID>option 4</alternativeID>
+				<values>
+					<value>
+						<real>0.0</real>
+					</value>
+				</values>
+			</column>
+			<column>
+				<alternativeID>option 5</alternativeID>
+				<values>
+					<value>
+						<real>0.0</real>
+					</value>
+				</values>
+			</column>
+			<column>
+				<alternativeID>option 6</alternativeID>
+				<values>
+					<value>
+						<real>1.0</real>
+					</value>
+				</values>
+			</column>
+			<column>
+				<alternativeID>option 7</alternativeID>
+				<values>
+					<value>
+						<real>0.0</real>
+					</value>
+				</values>
+			</column>
+		</row>
+	</alternativesMatrix>
+</xmcda:XMCDA>

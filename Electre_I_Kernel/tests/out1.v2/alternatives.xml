@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xmcda:XMCDA xmlns:xmcda="http://www.decision-deck.org/2017/XMCDA-2.2.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-Instance">
+    <alternatives>
+        <alternative id="option 1">
+            <type>real</type>
+            <active>true</active>
+        </alternative>
+        <alternative id="option 2">
+            <type>real</type>
+            <active>true</active>
+        </alternative>
+        <alternative id="option 3">
+            <type>real</type>
+            <active>true</active>
+        </alternative>
+        <alternative id="option 4">
+            <type>real</type>
+            <active>true</active>
+        </alternative>
+        <alternative id="option 5">
+            <type>real</type>
+            <active>true</active>
+        </alternative>
+        <alternative id="option 6">
+            <type>real</type>
+            <active>true</active>
+        </alternative>
+        <alternative id="option 7">
+            <type>real</type>
+            <active>true</active>
+        </alternative>
+        <alternative id="option 8">
+            <type>real</type>
+            <active>true</active>
+        </alternative>
+        <alternative id="option 9">
+            <type>real</type>
+            <active>true</active>
+        </alternative>
+        <alternative id="option 10">
+            <type>real</type>
+            <active>true</active>
+        </alternative>
+        <alternative id="option 11">
+            <type>real</type>
+            <active>true</active>
+        </alternative>
+        <alternative id="option 12">
+            <type>real</type>
+            <active>true</active>
+        </alternative>
+        <alternative id="option 13">
+            <type>real</type>
+            <active>true</active>
+        </alternative>
+        <alternative id="option 14">
+            <type>real</type>
+            <active>true</active>
+        </alternative>
+        <alternative id="option 15">
+            <type>real</type>
+            <active>true</active>
+        </alternative>
+    </alternatives>
+</xmcda:XMCDA>

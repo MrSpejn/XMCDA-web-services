@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xmcda:XMCDA xmlns:xmcda="http://www.decision-deck.org/2017/XMCDA-2.2.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-Instance">
+    <alternativesValues>
+        <alternativeValue>
+            <alternativeID>option 1</alternativeID>
+            <values>
+                <value>
+                    <real>1.0</real>
+                </value>
+            </values>
+        </alternativeValue>
+        <alternativeValue>
+            <alternativeID>option 5</alternativeID>
+            <values>
+                <value>
+                    <real>1.0</real>
+                </value>
+            </values>
+        </alternativeValue>
+        <alternativeValue>
+            <alternativeID>option 7</alternativeID>
+            <values>
+                <value>
+                    <real>1.0</real>
+                </value>
+            </values>
+        </alternativeValue>
+        <alternativeValue>
+            <alternativeID>option 8</alternativeID>
+            <values>
+                <value>
+                    <real>1.0</real>
+                </value>
+            </values>
+        </alternativeValue>
+        <alternativeValue>
+            <alternativeID>option 9</alternativeID>
+            <values>
+                <value>
+                    <real>1.0</real>
+                </value>
+            </values>
+        </alternativeValue>
+        <alternativeValue>
+            <alternativeID>option 10</alternativeID>
+            <values>
+                <value>
+                    <real>1.0</real>
+                </value>
+            </values>
+        </alternativeValue>
+        <alternativeValue>
+            <alternativeID>option 11</alternativeID>
+            <values>
+                <value>
+                    <real>1.0</real>
+                </value>
+            </values>
+        </alternativeValue>
+        <alternativeValue>
+            <alternativeID>option 13</alternativeID>
+            <values>
+                <value>
+                    <real>1.0</real>
+                </value>
+            </values>
+        </alternativeValue>
+    </alternativesValues>
+</xmcda:XMCDA>

@@ -3,7 +3,6 @@ library(igraph)
 library(tidyverse)
 library(viridis)
 library(ggplot2)
-library(RCurl)
 
 multiplot <- function(..., plotlist=NULL, file, cols=1, layout=NULL) {
   require(grid)

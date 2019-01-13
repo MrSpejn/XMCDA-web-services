@@ -38,8 +38,14 @@ RankingComparision <- function(inputs) {
   png(tf1 <- tempfile(fileext = ".png"), height = 800, width=800);    
   thm <- ttheme_default(
       colhead = list(padding=unit.c(unit(30, "mm"), unit(10, "mm"))),
-      rowhead = list(padding=unit.c(unit(30, "mm"), unit(10, "mm")))
+      rowhead = list(
+          padding=unit.c(unit(30, "mm"), unit(10, "mm")),
+          bg_params=list(fill="gray20"),
+          fg_params=list(col="white", hjust=0, x=0.5)
+      ),
   )
+  grob = tableGrob(frame, theme=thm)
+  grob$widths[1] = unit("1", "cm")
   grid.newpage()
   grid.draw(tableGrob(frame, theme=thm))
   dev.off()

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmcda:XMCDA
+  xsi:schemaLocation="http://www.decision-deck.org/2012/XMCDA-2.2.1 http://www.decision-deck.org/xmcda/_downloads/XMCDA-2.2.1.xsd"
+  xmlns:xmcda="http://www.decision-deck.org/2012/XMCDA-2.2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<alternativesComparisons>
+	<pairs>
+		<pair>
+			<initial>
+				<alternativeID>option 1</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>option 2</alternativeID>
+			</terminal>
+			<values>
+					<value>
+						<real>1.0</real>
+					</value>
+				</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>option 2</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>option 10</alternativeID>
+			</terminal>
+			<values>
+					<value>
+						<real>1.0</real>
+					</value>
+				</values>
+		</pair>
+		<pair>
+			<initial>
+				<alternativeID>option 1</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>option 3</alternativeID>
+			</terminal>
+			<values>
+					<value>
+						<real>1.0</real>
+					</value>
+				</values>
+		</pair>
+        <pair>
+			<initial>
+				<alternativeID>option 5</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>option 4</alternativeID>
+			</terminal>
+			<values>
+					<value>
+						<real>1.0</real>
+					</value>
+				</values>
+		</pair>
+        	<pair>
+			<initial>
+				<alternativeID>option 13</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>option 15</alternativeID>
+			</terminal>
+			<values>
+					<value>
+						<real>1.0</real>
+					</value>
+				</values>
+		</pair>
+        <pair>
+			<initial>
+				<alternativeID>option 1</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>option 15</alternativeID>
+			</terminal>
+			<values>
+					<value>
+						<real>1.0</real>
+					</value>
+				</values>
+		</pair>
+        <pair>
+			<initial>
+				<alternativeID>option 11</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>option 3</alternativeID>
+			</terminal>
+			<values>
+					<value>
+						<real>1.0</real>
+					</value>
+				</values>
+		</pair>
+        	<pair>
+			<initial>
+				<alternativeID>option 7</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>option 6</alternativeID>
+			</terminal>
+			<values>
+					<value>
+						<real>1.0</real>
+					</value>
+				</values>
+		</pair>
+         <pair>
+			<initial>
+				<alternativeID>option 1</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>option 14</alternativeID>
+			</terminal>
+			<values>
+					<value>
+						<real>1.0</real>
+					</value>
+				</values>
+		</pair>
+        <pair>
+			<initial>
+				<alternativeID>option 3</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>option 5</alternativeID>
+			</terminal>
+			<values>
+					<value>
+						<real>1.0</real>
+					</value>
+				</values>
+		</pair>
+         <pair>
+			<initial>
+				<alternativeID>option 5</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>option 12</alternativeID>
+			</terminal>
+			<values>
+					<value>
+						<real>1.0</real>
+					</value>
+				</values>
+		</pair>
+        <pair>
+			<initial>
+				<alternativeID>option 4</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>option 7</alternativeID>
+			</terminal>
+			<values>
+					<value>
+						<real>1.0</real>
+					</value>
+				</values>
+		</pair>
+         <pair>
+			<initial>
+				<alternativeID>option 4</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>option 8</alternativeID>
+			</terminal>
+			<values>
+					<value>
+						<real>1.0</real>
+					</value>
+				</values>
+		</pair>
+          <pair>
+			<initial>
+				<alternativeID>option 4</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>option 9</alternativeID>
+			</terminal>
+			<values>
+					<value>
+						<real>1.0</real>
+					</value>
+				</values>
+		</pair>
+        	<pair>
+			<initial>
+				<alternativeID>option 15</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>option 4</alternativeID>
+			</terminal>
+			<values>
+					<value>
+						<real>1.0</real>
+					</value>
+				</values>
+		</pair>
+                <pair>
+			<initial>
+				<alternativeID>option 4</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>option 12</alternativeID>
+			</terminal>
+			<values>
+					<value>
+						<real>1.0</real>
+					</value>
+				</values>
+		</pair>
+        <pair>
+			<initial>
+				<alternativeID>option 3</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>option 12</alternativeID>
+			</terminal>
+			<values>
+					<value>
+						<real>1.0</real>
+					</value>
+				</values>
+		</pair>
+        <pair>
+			<initial>
+				<alternativeID>option 3</alternativeID>
+			</initial>
+			<terminal>
+				<alternativeID>option 6</alternativeID>
+			</terminal>
+			<values>
+					<value>
+						<real>1.0</real>
+					</value>
+				</values>
+		</pair>
+	</pairs>
+</alternativesComparisons>
+</xmcda:XMCDA>

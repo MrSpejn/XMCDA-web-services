@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmcda:XMCDA xmlns:xmcda="http://www.decision-deck.org/2009/XMCDA-2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.decision-deck.org/2009/XMCDA-2.0.0 file:/home/pat/Documents/currentResearch/DecisionDeck/svn-DecisionDeck/XMCDA/XMCDA-2.0.0.xsd">
+  <alternatives>
+    <alternative id="option 1"/>
+    <alternative id="option 2"/>
+    <alternative id="option 3"/>
+    <alternative id="option 4"/>
+    <alternative id="option 5"/>
+    <alternative id="option 6"/>
+    <alternative id="option 7"/>
+    <alternative id="option 8" name="ONK" />
+    <alternative id="option 9"/>
+    <alternative id="option 10"/>
+    <alternative id="option 11"/>
+    <alternative id="option 12"/>
+    <alternative id="option 13"/>
+    <alternative id="option 14"/>
+    <alternative id="option 15"/>
+  </alternatives>
+</xmcda:XMCDA>

@@ -63,12 +63,12 @@ find_cicles <- function(adjacency_matrix) {
 }
 
 aggregate <- function(adjacency_matrix, vertices_to_squash) {
-    squashed_rows <- adjacency_matrix[vertices_to_squash, -vertices_to_squash]
-    squashed_cols <- adjacency_matrix[-vertices_to_squash, vertices_to_squash]
-    reminder_matrix <- adjacency_matrix[-vertices_to_squash, -vertices_to_squash]
+    rows_to_squash <- adjacency_matrix[vertices_to_squash, -vertices_to_squash, drop = FALSE]
+    cols_to_squash <- adjacency_matrix[-vertices_to_squash, vertices_to_squash, drop = FALSE]
+    reminder_matrix <- adjacency_matrix[-vertices_to_squash, -vertices_to_squash, drop = FALSE]
     
-    squashed_rows <- append(apply(squashed_rows, 2, function(col) { min(sum(col), 1)}), 0)
-    squashed_cols <- apply(squashed_cols, 1, function(row) { min(sum(row), 1)})
+    squashed_rows <- append(apply(rows_to_squash, 2, function(col) { min(sum(col), 1)}), 0)
+    squashed_cols <- apply(cols_to_squash, 1, function(row) { min(sum(row), 1)})
     
     reminder_matrix <- cbind(reminder_matrix, squashed_cols)
     reminder_matrix <- rbind(reminder_matrix, squashed_rows)
@@ -169,6 +169,6 @@ Electre_I_Kernel <- function(inputs)
   return(list(
     alternatives=rownames(acyclicGraph),
     acyclicGraph=acyclicGraph,
-    kernel=kernel,
+    kernel=kernel
   ))
 }

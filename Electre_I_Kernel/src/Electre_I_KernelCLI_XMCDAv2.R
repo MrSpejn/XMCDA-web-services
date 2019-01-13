@@ -59,7 +59,7 @@ xmcdaDatav2 <- .jnew("org/xmcda/v2/XMCDA")
 xmcdaData <- .jnew("org/xmcda/XMCDA")
 
 loadXMCDAv2(xmcdaDatav2, inDirectory, alternativesFile, mandatory = TRUE, xmcdaMessages,"alternatives")
-loadXMCDAv2(xmcdaDatav2, inDirectory, outranking_matrixFile, mandatory = TRUE, xmcdaMessages,"alternativesMatrix")
+loadXMCDAv2(xmcdaDatav2, inDirectory, outranking_matrixFile, mandatory = TRUE, xmcdaMessages,"alternativesComparisons")
 
 # if we have problem with the inputs, it is time to stop
 
