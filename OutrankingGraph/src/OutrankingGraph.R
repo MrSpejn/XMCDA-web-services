@@ -75,6 +75,11 @@ OutrankingGraph <- function(inputs) {
   }
 
   g1 <- ggraph(graph, layout = 'kk') +
+      geom_edge_link(
+          colour = 'gray30',
+          arrow = arrow_for_edge,
+          start_cap = circle(1),
+          end_cap = circle(1)) + 
       geom_point(
           aes(x=x, y=y),
           size=21
@@ -86,11 +91,7 @@ OutrankingGraph <- function(inputs) {
       scale_colour_manual(values=c("white", "gray30")) +
       geom_node_label(aes(label=display_name), size=inputs$font_size, fill='white', label.size=0) +
       geom_node_circle(aes(x0=x, y0=y, r=0.15), size=0) +
-      geom_edge_link(
-          colour = 'gray30',
-          arrow = arrow_for_edge,
-          start_cap = circle(1),
-          end_cap = circle(1)) + 
+      
       theme_void() + theme(
           legend.position="none",
           plot.title=element_text(size=30, hjust=0.5),
