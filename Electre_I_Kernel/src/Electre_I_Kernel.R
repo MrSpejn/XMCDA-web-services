@@ -1,10 +1,10 @@
-find_cycle <- function(nodeIdx, path, adjacency_matrix) {
-    successors = which(adjacency_matrix[nodeIdx, ] == 1)
+findCycleTraverseDeepFirst <- function(nodeIdx, path, adjacencyMatrix) {
+    successors = which(adjacencyMatrix[nodeIdx, ] == 1)
     path = c(path, nodeIdx)
     for (successor in successors) {
         if (successor %in% path) return(path[match(successor, path):length(path)])
         
-        cycle = find_cycle(successor, path, adjacency_matrix)
+        cycle = findCycleTraverseDeepFirst(successor, path, adjacencyMatrix)
         if (length(cycle) > 0) {
             return(cycle)
         }
@@ -12,54 +12,60 @@ find_cycle <- function(nodeIdx, path, adjacency_matrix) {
     return(c())
 }
 
-aggregate <- function(adjacency_matrix, vertices_to_squash) {
-    rows_to_squash <- adjacency_matrix[vertices_to_squash, -vertices_to_squash, drop = FALSE]
-    cols_to_squash <- adjacency_matrix[-vertices_to_squash, vertices_to_squash, drop = FALSE]
-    reminder_matrix <- adjacency_matrix[-vertices_to_squash, -vertices_to_squash, drop = FALSE]
+findCycle <- function(adjacencyMatrix) {
+    for (i in seq(nrow(adjacencyMatrix))) {
+        result = findCycleTraverseDeepFirst(i, c(), adjacencyMatrix)
+        if (length(result) > 0) {
+            return(result)
+        }
+    }
+    return(c())
+}
+
+aggregateToSingleNode <- function(adjacencyMatrix, vertices) {
+    rows_to_squash <- adjacencyMatrix[vertices, -vertices, drop = FALSE]
+    cols_to_squash <- adjacencyMatrix[-vertices, vertices, drop = FALSE]
+    reminderMatrix <- adjacencyMatrix[-vertices, -vertices, drop = FALSE]
     
     squashed_rows <- append(apply(rows_to_squash, 2, function(col) { min(sum(col), 1)}), 0)
     squashed_cols <- apply(cols_to_squash, 1, function(row) { min(sum(row), 1)})
     
-    reminder_matrix <- cbind(reminder_matrix, squashed_cols)
-    reminder_matrix <- rbind(reminder_matrix, squashed_rows)
+    reminderMatrix <- cbind(reminderMatrix, squashed_cols)
+    reminderMatrix <- rbind(reminderMatrix, squashed_rows)
     
-    rn <- rownames(reminder_matrix)
-    rn[nrow(reminder_matrix)] <- paste(rownames(adjacency_matrix)[vertices_to_squash], collapse='_')
-    rownames(reminder_matrix) <- rn
-    colnames(reminder_matrix) <- rn
+    rn <- rownames(reminderMatrix)
+    rn[nrow(reminderMatrix)] <- paste(rownames(adjacencyMatrix)[vertices], collapse='_')
+    rownames(reminderMatrix) <- rn
+    colnames(reminderMatrix) <- rn
     
-    reminder_matrix
+    reminderMatrix
 }
 
-remove_cycles <- function(adjacency_matrix) {
-    processed_matrix <- adjacency_matrix
-    cycle <- find_cycle(1, c(), processed_matrix)
+removeCycles <- function(adjacencyMatrix) {
+    processed_matrix <- adjacencyMatrix
+    cycle <- findCycle(processed_matrix)
 
     while (length(cycle) > 0) {
-        processed_matrix <- aggregate(processed_matrix, cycle)
-
-        cycle <- find_cycle(1, c(), processed_matrix)
+        processed_matrix <- aggregateToSingleNode(processed_matrix, cycle)
+        cycle <- findCycle(processed_matrix)
     }
     processed_matrix
 }
 
-get_predecessors <- function(adjacency_matrix) {
+getPredecessorsForAll <- function(adjacencyMatrix, names) {
     predecessors <- list()
-    for (col_idx in seq(1, ncol(adjacency_matrix))) {
-        vertex_pred <- rownames(adjacency_matrix)[adjacency_matrix[,col_idx] == 1]
+    for (col_idx in seq(1, ncol(adjacencyMatrix))) {
+        vertex_pred <- names[adjacencyMatrix[,col_idx] == 1]
         predecessors[[col_idx]] <- vertex_pred        
     }
     
     return(predecessors)
 }
 
-all_marked <- function(data_frame) {
-    all(data_frame$status == 'Y' | data_frame$status == 'N')
-}
-
-remove_predecessors <- function (predecessors, to_remove) {
+removePredecessors <- function (predecessors, to_remove) {
     if (length(predecessors)) {
-        should_be_removed <- as.logical(!(predecessors %in% to_remove))
+        should_be_removed =
+            as.logical(!(predecessors %in% to_remove))
 
         if (any(should_be_removed)) {
             return(predecessors[should_be_removed])
@@ -68,17 +74,27 @@ remove_predecessors <- function (predecessors, to_remove) {
     return(list())
 }
 
-find_kernel <- function(adjacency_matrix) {
-    predecessors <- get_predecessors(adjacency_matrix)
+allMarked <- function(data_frame) {
+    all(data_frame$status == 'Y' | data_frame$status == 'N')
+}
+
+findKernel <- function(adjacencyMatrix) {
+    names = rownames(adjacencyMatrix)
+    if (is.null(names)) {
+        names = seq(nrow(adjacencyMatrix))
+    }
+    
+    predecessors <- getPredecessorsForAll(adjacencyMatrix, names)
+
     data_frame <- data.frame(
-        vertex_name=rownames(adjacency_matrix),
+        vertex_name=names,
         predecessors=I(predecessors),
         status='',
         stringsAsFactors = FALSE
     )
 
     iterations <- 0
-    while(!all_marked(data_frame) && iterations <= nrow(data_frame)) {
+    while(!allMarked(data_frame) && iterations <= nrow(data_frame)) {
         to_remove <- list()
 
         for (row_idx in seq(1, nrow(data_frame))) {
@@ -101,7 +117,7 @@ find_kernel <- function(adjacency_matrix) {
             predecessors <- data_frame[row_idx,]$predecessors[[1]]
             
             data_frame[row_idx,]$predecessors[[1]] <-
-                remove_predecessors(predecessors, to_remove)
+                removePredecessors(predecessors, to_remove)
         }
         iterations <- iterations + 1
     }
@@ -111,8 +127,8 @@ find_kernel <- function(adjacency_matrix) {
 
 Electre_I_Kernel <- function(inputs)
 {
-  acyclicGraph <- remove_cycles(inputs$outrankingMatrix)
-  kernel <- find_kernel(acyclicGraph)
+  acyclicGraph <- removeCycles(inputs$outrankingMatrix)
+  kernel <- findKernel(acyclicGraph)
 
   return(list(
     alternatives=rownames(acyclicGraph),
