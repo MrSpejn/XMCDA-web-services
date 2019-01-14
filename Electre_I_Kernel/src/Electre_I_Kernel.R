@@ -1,65 +1,15 @@
-traverse_deep <- function(node, nodes_dependants, path, cycles) {
-    current_path <- append(path, node)
-    if (length(nodes_dependants[[node]]) == 0) {
-        return(list(nodes_dependants, cycles))
-    }
-    
-    updated_nodes_dependants <- nodes_dependants
-    updated_cycles <- cycles
-    
-    
-    for (successor_idx in seq(1:length(updated_nodes_dependants[[node]]))) {
+find_cycle <- function(nodeIdx, path, adjacency_matrix) {
+    successors = which(adjacency_matrix[nodeIdx, ] == 1)
+    path = c(path, nodeIdx)
+    for (successor in successors) {
+        if (successor %in% path) return(path[match(successor, path):length(path)])
         
-        updated_nodes_dependants[[node]][[successor_idx]]$traversed <- TRUE
-        successor <- updated_nodes_dependants[[node]][[successor_idx]]
-
-        if (successor$idx %in% current_path) {
-            updated_cycles[[length(updated_cycles)+1]] <- 
-                unlist(current_path[match(successor$idx, current_path):length(current_path)])
-            next  
-        }
-        new_data <- traverse_deep(successor$idx, updated_nodes_dependants, current_path, updated_cycles)
-        updated_nodes_dependants <- new_data[[1]]
-        updated_cycles <- new_data[[2]]
-    }
-    return(list(updated_nodes_dependants, updated_cycles))
-}
-
-find_cicles <- function(adjacency_matrix) {
-    nodes_dependants <- list()
-
-    for (row_idx in seq(1, nrow(adjacency_matrix))) {
-        row <- adjacency_matrix[row_idx, ]
-        dependants <- Filter(function (idx) { row[idx] == 1 }, seq(1, length(row)))
-        nodes_dependants[[row_idx]] <- sapply(dependants, function (idx) { 
-            a <- list(list(idx=idx, traversed=FALSE))
-            return(a)
-        })
-       
-    }
-    
-    start_node <- 0
-    cycles <- list()
-    while (any(unlist(nodes_dependants) == FALSE) && start_node < length(nodes_dependants)) {
-        start_node <- start_node + 1
-        if (all(unlist(nodes_dependants[start_node])) == TRUE) {
-            next
-        }
-        current_path <- list(start_node)
-        for (node_idx in seq(1:length(nodes_dependants[[start_node]]))) {
-            nodes_dependants[[start_node]][[node_idx]]$traversed <- TRUE
-            node <- nodes_dependants[[start_node]][[node_idx]]
-            
-            result <- traverse_deep(node$idx, nodes_dependants, current_path, cycles)
-            cycles <- result[[2]]
-            nodes_dependants <- result[[1]]
+        cycle = find_cycle(successor, path, adjacency_matrix)
+        if (length(cycle) > 0) {
+            return(cycle)
         }
     }
-
-    cycles <- Map(sort, cycles)
-    cycles <- Map(as.integer, cycles)
-
-    return(cycles[!duplicated(cycles)])
+    return(c())
 }
 
 aggregate <- function(adjacency_matrix, vertices_to_squash) {
@@ -79,6 +29,18 @@ aggregate <- function(adjacency_matrix, vertices_to_squash) {
     colnames(reminder_matrix) <- rn
     
     reminder_matrix
+}
+
+remove_cycles <- function(adjacency_matrix) {
+    processed_matrix <- adjacency_matrix
+    cycle <- find_cycle(1, c(), processed_matrix)
+
+    while (length(cycle) > 0) {
+        processed_matrix <- aggregate(processed_matrix, cycle)
+
+        cycle <- find_cycle(1, c(), processed_matrix)
+    }
+    processed_matrix
 }
 
 get_predecessors <- function(adjacency_matrix) {
@@ -104,20 +66,6 @@ remove_predecessors <- function (predecessors, to_remove) {
         }
     }
     return(list())
-}
-
-
-remove_cycles <- function(adjacency_matrix) {
-    processed_matrix <- adjacency_matrix
-    cycles <- find_cicles(processed_matrix)
-
-    while (length(cycles) > 0) {
-        shortest <- cycles[which.min(Map(length, cycles))][[1]]
-        processed_matrix <- aggregate(processed_matrix, shortest)
-
-        cycles <- find_cicles(processed_matrix)
-    }
-    processed_matrix
 }
 
 find_kernel <- function(adjacency_matrix) {
