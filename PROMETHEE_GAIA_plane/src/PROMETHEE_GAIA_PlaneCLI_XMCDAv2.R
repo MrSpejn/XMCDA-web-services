@@ -156,7 +156,7 @@ for (i in 1:length(xResults)){
 
   # now write the converted result to the file
 
-  parser2<-.jnew("org/xmcda/parsers/xml/xmcda_v2/XMCDAParser")
+ parser2<-.jnew("org/xmcda/parsers/xml/xmcda_v2/XMCDAParser")
 
   tmp <- handleException(
      function() return(
@@ -165,6 +165,14 @@ for (i in 1:length(xResults)){
      xmcdaMessages,
      humanMessage = paste("Error while writing ", outputFilename, " reason: ", sep="")
    )
+
+  if (is.null(tmp)) {
+    file <- readLines(outputFilename)
+    file <- gsub(pattern = "</alternatives>", replace = paste("</alternatives><image>", results$plot, "</image>"), x = file)
+    writeLines(file, con=outputFilename)  
+  }
+
+   
 
    if (xmcdaMessages$programExecutionResultsList$size()>0){
      if (xmcdaMessages$programExecutionResultsList$get(as.integer(0))$isError()){

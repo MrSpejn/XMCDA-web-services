@@ -123,9 +123,13 @@ for (i in 1:length(xResults)){
     humanMessage = paste("Error while writing ", outputFilename,", reason :")
   )
 
-  if (is.null(tmp)){
+  if (is.null(tmp)) {
     writeXMCDA(xmcdaMessages, paste(outDirectory,messagesFile, sep="/"))
     stop("Error while writing ",outputFilename,sep="")
+  } else {
+    file <- readLines(outputFilename)
+    file <- gsub(pattern = "</alternatives>", replace = paste("</alternatives><image>", results$plot, "</image>"), x = file)
+    writeLines(file, con=outputFilename)  
   }
 }
 
