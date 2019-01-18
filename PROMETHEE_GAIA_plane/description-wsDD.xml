@@ -14,20 +14,26 @@
       <xmcda tag="alternatives" />
     </input>
 
-    <input id="input2" name="promethee_profiles" displayName="Promethee Profiles" isoptional="0">
+    <input id="input2" name="criteria" displayName="Criteria" isoptional="0">
       <documentation>
-        <description>Matrix containing criterion net flows for each alternative on each criterion </description>
+        <description>Set of criteria.</description>
       </documentation>
-      <xmcda tag="alternativesMatrix" />
+      <xmcda tag="criteria" />
     </input>
 
-    <output id="output1" name="alternatives" displayName="Alternatives">
+    <input id="input3" name="promethee_profiles" displayName="Promethee Profiles" isoptional="0">
       <documentation>
-        <description>Aggregated alternatives of acyclic graph</description>
+        <description>Criterion net flows for each alternative on each criterion </description>
       </documentation>
-      <xmcda tag="alternatives" />
-    </output>
+      <xmcda tag="performanceTable" />
+    </input>
 
+    <input id="input4" name="criteria_weights" displayName="Criteria weights" isoptional="0">
+      <documentation>
+        <description>Criteria weights</description>
+      </documentation>
+      <xmcda tag="criteriaValues" />
+    </input>
 
     <output id="output1" name="image" displayName="image">
       <documentation>
