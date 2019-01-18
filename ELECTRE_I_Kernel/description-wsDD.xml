@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <program_description>
-  <program provider="PUT" name="Electre_I_Kernel" version="1.0.0" displayName="Electre_I_Kernel" />
+  <program provider="PUT" name="ELECTRE_I_Kernel" version="1.0.0" displayName="ELECTRE_I_Kernel" />
   <documentation>
     <description></description>
     <contact><![CDATA[Tomasz Josiak <tomasz.josiak@gmail.com>]]></contact>
@@ -9,7 +9,7 @@
 
     <input id="input1" name="alternatives" displayName="alternatives" isoptional="0">
       <documentation>
-        <description>Selected alternatives.</description>
+        <description>Set of alternatives.</description>
       </documentation>
       <xmcda tag="alternatives" />
     </input>
@@ -36,9 +36,9 @@
       <xmcda tag="alternativesValues" />
     </output>
 
-    <output id="output3" name="outranking_matrix" displayName="Outranking Matrix">
+    <output id="output3" name="acyclic_adjancency_matrix" displayName="Acyclic Adjacency Matrix">
       <documentation>
-        <description>Outranking matrix of acyclic graph generated from the input</description>
+        <description>Acyclic graph generated from the outranking graph by aggregating cycles</description>
       </documentation>
       <xmcda tag="alternativesMatrix" />
     </output>
